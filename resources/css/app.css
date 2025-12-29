@@ -1,6 +1,13 @@
-@import "tailwindcss";
+@import "tailwindcss"; 
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php'; 
+@source '../../storage/framework/views/*.php'; 
 @source '../**/*.blade.php';
 @source '../**/*.js';
+
+@theme {
+  --text-2xs: 10px;
+
+  /* Custom Fonts */
+  --font-display: "Hanken Grotesk", "sans-serif";
+}
