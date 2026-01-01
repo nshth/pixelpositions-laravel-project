@@ -1,3 +1,4 @@
+@props(['job'])
 <div class="p-4 bg-white/7 rounded-xl flex flex-col text-center border border-transparent hover:border-blue-800 group transition-colors duration-700">
     <div class="self-start text-sm">Laracasts</div>
     <div class="py-8">
@@ -6,9 +7,9 @@
     </div>
     <div class="flex justify-between items-center mt-auto">
         <div>
-            <x-tag size='small'>Tag</x-tag>
-            <x-tag size='small'>Tag</x-tag>
-            <x-tag size='small'>Tag</x-tag> 
+            @foreach($job->tags as $tag)
+                <x-tag size='small'>Tag</x-tag>
+            @endforeach 
         </div>
         <x-employer-logo :width="42"/>
     </div>

@@ -1,3 +1,4 @@
+@props(['job'])
 <div class="p-4 bg-white/7 rounded-xl flex gap-x-6 border border-transparent hover:border-blue-800 group transition-colors duration-700">
     <div>
         <x-employer-logo/>
@@ -13,10 +14,10 @@
             <x-tag>Remote</x-tag>
             <x-tag>22h</x-tag>
         </div>
-        <div class="mt-auto ">
-            <x-tag size='small'>Tag</x-tag>
-            <x-tag size='small'>Tag</x-tag>
-            <x-tag size='small'>Tag</x-tag> 
+        <div class="mt-auto ">            
+            @foreach($job->tags as $tag)
+                <x-tag size='small'>Tag</x-tag>
+            @endforeach  
         </div>
     </div>
 </div>
