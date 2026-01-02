@@ -11,6 +11,7 @@ class Job extends Model
 {
     /** @use HasFactory<\Database\Factories\JobFactory> */
     use HasFactory;
+    protected $guarded = [];
     public function tag(string $name)
     {
         $tag = Tag::firstorCreate(['name'=>$name]);

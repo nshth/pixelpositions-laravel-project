@@ -11,3 +11,17 @@
   /* Custom Fonts */
   --font-display: "Hanken Grotesk", "sans-serif";
 }
+
+/* File input fallbacks / styling */
+input[type="file"] {
+  color: white; 
+}
+input[type="file"]::-webkit-file-upload-button,
+input[type="file"]::file-selector-button {
+  background: #ffffff;
+  color: #000000;
+  padding: 1px, 1px;
+  border-radius: 5px;
+  border: none;
+  font-size: 10px;
+}
