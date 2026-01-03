@@ -6,7 +6,11 @@
     </div>
     <div class="flex-1">
         <a href="" class="self-start text-sm text-gray-600">{{$job->employer->name}}</a>
-        <h3 class="font-bold text-lg group-hover:text-blue-700 transition-colors duration-500">{{$job->title}}</h3>
+        <h3 class="font-bold text-lg group-hover:text-blue-700 transition-colors duration-500">
+            <a href="{{$job->url}}">
+                {{$job->title}}
+            </a> 
+        </h3>
         <p class="text-sm text-gray-400">{{$job->salary}} - {{$job->type}}</p>
     </div>
     
