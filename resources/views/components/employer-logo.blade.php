@@ -1,3 +1,3 @@
-@props(['width' => 90])
+@props(['employer','width' => 90])
 
-<img class="rounded-xl" src="https://picsum.photos/seed/{{ rand(8, 100000) }}/{{ $width }}" alt="">
+<img class="rounded-xl" src="{{asset($employer->logo)}}" alt="">

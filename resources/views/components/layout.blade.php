@@ -24,14 +24,20 @@
                 <a href="">Companies</a>
             </div>
             @auth
-            <div >
+            <div class="space-x-6 flex">
                 <a href="/jobs/create">Post a Job</a>
+                <form method="POST" action="/logout">
+                    @csrf
+                    @method('DELETE')
+                    <button class="hover:cursor-pointer">Log Out</button>
+                </form>
+
             </div>
             @endauth
 
             @guest
-            <div >
-                <a href="/login">Log In</a>
+            <div class="space-x-6 flex">
+                <a href="/login" class="mr-5">Log In</a>
                 <a href="/register">Sign Up</a>
             </div>
             @endguest

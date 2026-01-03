@@ -2,7 +2,7 @@
 
 <div class="p-4 bg-white/7 rounded-xl flex gap-x-6 border border-transparent hover:border-blue-800 group transition-colors duration-700">
     <div>
-        <x-employer-logo/>
+        <x-employer-logo :employer="$job->employer"/>
     </div>
     <div class="flex-1">
         <a href="" class="self-start text-sm text-gray-600">{{$job->employer->name}}</a>
